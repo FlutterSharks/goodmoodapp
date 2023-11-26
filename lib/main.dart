@@ -21,6 +21,10 @@ class MyApp extends StatelessWidget {
             title: const Center(
               child: Text('My Good Mood App'),
             ),
+            titleTextStyle: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
