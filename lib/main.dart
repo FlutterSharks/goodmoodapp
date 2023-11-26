@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,21 +22,18 @@ class MyApp extends StatelessWidget {
               child: Text('My Good Mood App'),
             ),
           ),
-          body: const Column(
+          body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
                 child: Text(
                   'Hello Sunshine',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 45,
-                  ),
+                  style: GoogleFonts.poppins(fontSize: 35),
                 ),
               ),
-              Image(
+              const Image(
                 image: AssetImage('images/obraz.png'),
-                width: 350,
+                width: 250,
               ),
             ],
           )),
