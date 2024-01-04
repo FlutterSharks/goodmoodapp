@@ -15,32 +15,55 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.green,
-            title: const Center(
-              child: Text('My Good Mood App'),
-            ),
-            titleTextStyle: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Text(
-                  'Hello Sunshine',
-                  style: GoogleFonts.poppins(fontSize: 35),
-                ),
-              ),
-              const Image(
-                image: AssetImage('images/obraz.png'),
-                width: 250,
-              ),
-            ],
-          )),
+      home: const LoginPage(),
     );
+  }
+}
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.green,
+          title: const Center(
+            child: Text('My Good Mood App'),
+          ),
+          titleTextStyle: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: Text(
+                'Hello Sunshine',
+                style: GoogleFonts.poppins(fontSize: 35),
+              ),
+            ),
+            const Image(
+              image: AssetImage('images/obraz.png'),
+              width: 250,
+            ),
+            ElevatedButton(
+                child: const Text(
+                  'Start',
+                  style: TextStyle(fontSize: 25),
+                ),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const LoginPage(),
+                    ),
+                  );
+                })
+          ],
+        ));
   }
 }
