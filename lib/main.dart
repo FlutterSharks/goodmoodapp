@@ -81,8 +81,9 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: const Color.fromARGB(239, 97, 197, 162),
         appBar: AppBar(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.deepPurpleAccent,
           title: const Center(
             child: Text('My Good Mood App'),
           ),
